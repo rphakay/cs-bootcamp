@@ -24,7 +24,7 @@ operation:
       filename = url[url.rfind("/")+1:]
 
   outputs:
-    - filename: $(filename)
+    - filename: ${filename}
     
   results:
     - SUCCESS
