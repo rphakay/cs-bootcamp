@@ -29,7 +29,7 @@ flow:
           io.cloudslang.base.remote_file_transfer.remote_secure_copy:
             - source_path: '${filename}'
             - destination_host: '${host}'
-            - destination_path: /tmp
+            - destination_path: "${get_sp('script_location')}"
             - destination_username: '${username}'
             - destination_password:
                 value: '${password}'
@@ -48,6 +48,9 @@ extensions:
       extract_filename:
         x: 117
         y: 145
+      get_file:
+        x: 253
+        y: 282
       remote_secure_copy:
         x: 393
         y: 184
@@ -55,9 +58,6 @@ extensions:
           fbb91223-2cdc-9a44-12b7-7e982d65ba8a:
             targetId: 353cc98e-c6f0-d192-61bc-5275fdd2a56a
             port: SUCCESS
-      get_file:
-        x: 253
-        y: 282
     results:
       SUCCESS:
         353cc98e-c6f0-d192-61bc-5275fdd2a56a:
